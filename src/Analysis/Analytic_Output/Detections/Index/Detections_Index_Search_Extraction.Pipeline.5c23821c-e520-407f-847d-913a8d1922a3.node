@@ -1,0 +1,4 @@
+name=Detections Index Search Extraction
+path=Analysis/Analytic Output/Detections/Index
+type=Pipeline
+uuid=5c23821c-e520-407f-847d-913a8d1922a3

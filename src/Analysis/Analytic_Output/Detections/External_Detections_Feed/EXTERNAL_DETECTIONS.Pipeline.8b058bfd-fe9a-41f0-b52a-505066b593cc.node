@@ -1,0 +1,4 @@
+name=EXTERNAL-DETECTIONS
+path=Analysis/Analytic Output/Detections/External Detections Feed
+type=Pipeline
+uuid=8b058bfd-fe9a-41f0-b52a-505066b593cc

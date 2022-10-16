@@ -1,0 +1,4 @@
+name=Detections Index
+path=Analysis/Analytic Output/Detections/Index
+type=Pipeline
+uuid=8cf210d9-475a-4626-b92b-168692a63cfa

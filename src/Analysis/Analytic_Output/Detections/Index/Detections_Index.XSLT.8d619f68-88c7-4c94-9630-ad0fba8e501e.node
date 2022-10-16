@@ -1,0 +1,4 @@
+name=Detections Index
+path=Analysis/Analytic Output/Detections/Index
+type=XSLT
+uuid=8d619f68-88c7-4c94-9630-ad0fba8e501e

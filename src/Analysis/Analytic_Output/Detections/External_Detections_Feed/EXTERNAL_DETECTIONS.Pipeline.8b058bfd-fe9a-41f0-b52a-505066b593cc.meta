@@ -1,0 +1,11 @@
+{
+  "type" : "Pipeline",
+  "uuid" : "8b058bfd-fe9a-41f0-b52a-505066b593cc",
+  "name" : "EXTERNAL-DETECTIONS",
+  "version" : "41de6671-b9ee-41f0-800f-6fe21ea4d0b1",
+  "parentPipeline" : {
+    "type" : "Pipeline",
+    "uuid" : "d7c55950-7427-48ab-a1b6-11bc7b449dfd",
+    "name" : "Event Data (Text)"
+  }
+}

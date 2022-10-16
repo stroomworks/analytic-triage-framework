@@ -1,0 +1,11 @@
+{
+  "type" : "Pipeline",
+  "uuid" : "8cf210d9-475a-4626-b92b-168692a63cfa",
+  "name" : "Detections Index",
+  "version" : "67629f28-2a77-436c-b27a-f885cccb7b33",
+  "parentPipeline" : {
+    "type" : "Pipeline",
+    "uuid" : "fcef1b20-083e-436c-ab95-47a6ce453435",
+    "name" : "Indexing"
+  }
+}

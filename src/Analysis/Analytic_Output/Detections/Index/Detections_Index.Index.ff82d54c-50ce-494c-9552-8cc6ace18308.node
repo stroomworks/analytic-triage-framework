@@ -1,0 +1,5 @@
+name=Detections Index
+path=Analysis/Analytic Output/Detections/Index
+tags=DataSource
+type=Index
+uuid=ff82d54c-50ce-494c-9552-8cc6ace18308

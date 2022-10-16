@@ -1,0 +1,162 @@
+{
+  "components" : [ {
+    "type" : "table",
+    "id" : "table-IIO1T",
+    "name" : "Table",
+    "settings" : {
+      "type" : "table",
+      "queryId" : "query-JT8D7",
+      "fields" : [ {
+        "id" : "table-IIO1T|IKX4M",
+        "name" : "EventTime",
+        "expression" : "${EventTime}",
+        "format" : {
+          "type" : "DATE_TIME"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|E1OAM",
+        "name" : "System",
+        "expression" : "${System}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|DO2P5",
+        "name" : "Action",
+        "expression" : "${Action}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|JIAJL",
+        "name" : "Description",
+        "expression" : "${Description}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "__stream_id__",
+        "name" : "__stream_id__",
+        "expression" : "${StreamId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      }, {
+        "id" : "__event_id__",
+        "name" : "__event_id__",
+        "expression" : "${EventId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      } ],
+      "extractionPipeline" : {
+        "type" : "Pipeline",
+        "uuid" : "e5ecdf93-d433-45ac-b14a-1f77f16ae4f7",
+        "name" : "Example Extraction"
+      },
+      "maxResults" : [ 1000000 ],
+      "showDetail" : false,
+      "conditionalFormattingRules" : [ ],
+      "modelVersion" : "6.1.26"
+    }
+  }, {
+    "type" : "query",
+    "id" : "query-JT8D7",
+    "name" : "Query",
+    "settings" : {
+      "type" : "query",
+      "dataSource" : {
+        "type" : "Index",
+        "uuid" : "57a35b9a-083c-4a93-a813-fc3ddfe1ff44",
+        "name" : "Example Index"
+      },
+      "expression" : {
+        "type" : "operator"
+      },
+      "automate" : {
+        "open" : false,
+        "refresh" : false,
+        "refreshInterval" : "10s"
+      }
+    }
+  }, {
+    "type" : "text",
+    "id" : "text-3YE4D",
+    "name" : "Text",
+    "settings" : {
+      "type" : "text",
+      "streamIdField" : {
+        "id" : "__stream_id__",
+        "name" : "__stream_id__",
+        "expression" : "${StreamId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      },
+      "recordNoField" : {
+        "id" : "__event_id__",
+        "name" : "__event_id__",
+        "expression" : "${EventId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      },
+      "showAsHtml" : false,
+      "showStepping" : false,
+      "modelVersion" : "6.1.26"
+    }
+  } ],
+  "layout" : {
+    "type" : "splitLayout",
+    "preferredSize" : {
+      "width" : 200,
+      "height" : 200
+    },
+    "dimension" : 1,
+    "children" : [ {
+      "type" : "tabLayout",
+      "preferredSize" : {
+        "width" : 200,
+        "height" : 200
+      },
+      "tabs" : [ {
+        "id" : "query-JT8D7"
+      } ],
+      "selected" : 0
+    }, {
+      "type" : "tabLayout",
+      "preferredSize" : {
+        "width" : 200,
+        "height" : 200
+      },
+      "tabs" : [ {
+        "id" : "table-IIO1T"
+      } ],
+      "selected" : 0
+    }, {
+      "type" : "tabLayout",
+      "preferredSize" : {
+        "width" : 0,
+        "height" : 0
+      },
+      "tabs" : [ {
+        "id" : "text-3YE4D",
+        "visible" : true
+      } ],
+      "selected" : 0
+    } ]
+  },
+  "tabVisibility" : "SHOW_ALL"
+}

@@ -1,0 +1,4 @@
+name=EXTERNAL-DETECTIONS
+path=Analysis/Analytic Output/Detections/External Detections Feed
+type=XSLT
+uuid=c45fb42d-2cfa-4534-b97e-fbfcc6403e1d

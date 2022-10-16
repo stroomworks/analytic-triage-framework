@@ -1,0 +1,9 @@
+{
+  "type" : "Feed",
+  "uuid" : "03e89bdd-6e80-42ca-9de4-0133af51673d",
+  "name" : "EXTERNAL-DETECTIONS",
+  "version" : "c66c8e44-d064-4d76-9a67-0ecd74ca727d",
+  "reference" : false,
+  "streamType" : "Raw Events",
+  "status" : "RECEIVE"
+}

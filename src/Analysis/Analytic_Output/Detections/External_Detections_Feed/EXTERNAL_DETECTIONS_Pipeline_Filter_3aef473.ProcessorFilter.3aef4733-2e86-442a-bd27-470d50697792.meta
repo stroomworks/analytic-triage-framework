@@ -1,0 +1,31 @@
+{
+  "uuid" : "3aef4733-2e86-442a-bd27-470d50697792",
+  "queryData" : {
+    "dataSource" : {
+      "type" : "StreamStore",
+      "uuid" : "0",
+      "name" : "StreamStore"
+    },
+    "expression" : {
+      "type" : "operator",
+      "children" : [ {
+        "type" : "term",
+        "field" : "Type",
+        "condition" : "EQUALS",
+        "value" : "Raw Events"
+      }, {
+        "type" : "term",
+        "field" : "Feed",
+        "condition" : "EQUALS",
+        "value" : "EXTERNAL-DETECTIONS"
+      } ]
+    }
+  },
+  "priority" : 10,
+  "reprocess" : false,
+  "enabled" : true,
+  "deleted" : false,
+  "processorUuid" : "6443f4f3-eed6-47fb-b5eb-0a3d1de3967f",
+  "pipelineUuid" : "8b058bfd-fe9a-41f0-b52a-505066b593cc",
+  "pipelineName" : "EXTERNAL-DETECTIONS"
+}

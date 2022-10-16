@@ -1,0 +1,7 @@
+{
+  "type" : "Pipeline",
+  "uuid" : "9308de37-bf09-4a7b-91d4-31a8669abfc3",
+  "name" : "Detect Unusual Login Times",
+  "version" : "5897da38-b289-4ba9-978d-88246854e7b8",
+  "description" : ""
+}

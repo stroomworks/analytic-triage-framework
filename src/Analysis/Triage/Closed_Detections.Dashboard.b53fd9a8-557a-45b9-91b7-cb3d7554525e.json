@@ -1,0 +1,199 @@
+{
+  "parameters" : "since=day()-7d",
+  "components" : [ {
+    "type" : "table",
+    "id" : "table-IIO1T",
+    "name" : "Detection",
+    "settings" : {
+      "type" : "table",
+      "queryId" : "query-JT8D7",
+      "fields" : [ {
+        "id" : "table-IIO1T|VGDGR",
+        "name" : "EventTime",
+        "expression" : "${EventTime}",
+        "sort" : {
+          "order" : 0,
+          "direction" : "DESCENDING"
+        },
+        "format" : {
+          "type" : "DATE_TIME"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|22DRM",
+        "name" : "Feed",
+        "expression" : "${Feed}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|0EG2S",
+        "name" : "Detector Name",
+        "expression" : "${Detector Name}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|2GW4C",
+        "name" : "Headline",
+        "expression" : "${Headline}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 283,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|VLAEG",
+        "name" : "Description",
+        "expression" : "${Description}",
+        "format" : {
+          "type" : "GENERAL"
+        },
+        "width" : 678,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|L21X4",
+        "name" : "Linked Events",
+        "expression" : "dashboard('Perform Triage',${TriageDashboard},'expressionJson=' + replace(${LinkedEventExpression},'¬','&#34;'))",
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "table-IIO1T|70TGG",
+        "name" : "Status",
+        "expression" : "annotation('View/Update', ${annotation:Id}, ${StreamId}, ${EventId}, 'Triage: ' + ${Headline}, ${Description}, 'New', currentUser(), 'Reopened by ' + currentUser() + ' - further investigation required.')",
+        "width" : 200,
+        "visible" : true,
+        "special" : false
+      }, {
+        "id" : "__stream_id__",
+        "name" : "__stream_id__",
+        "expression" : "${StreamId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      }, {
+        "id" : "__event_id__",
+        "name" : "__event_id__",
+        "expression" : "${EventId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      } ],
+      "extractionPipeline" : {
+        "type" : "Pipeline",
+        "uuid" : "5c23821c-e520-407f-847d-913a8d1922a3",
+        "name" : "Detections Index Search Extraction"
+      },
+      "maxResults" : [ 1000000 ],
+      "showDetail" : false,
+      "conditionalFormattingRules" : [ ],
+      "modelVersion" : "6.1.26"
+    }
+  }, {
+    "type" : "query",
+    "id" : "query-JT8D7",
+    "name" : "Query",
+    "settings" : {
+      "type" : "query",
+      "dataSource" : {
+        "type" : "Index",
+        "uuid" : "ff82d54c-50ce-494c-9552-8cc6ace18308",
+        "name" : "Detections Index"
+      },
+      "expression" : {
+        "type" : "operator",
+        "children" : [ {
+          "type" : "term",
+          "field" : "EventTime",
+          "condition" : "GREATER_THAN",
+          "value" : "${since}"
+        }, {
+          "type" : "term",
+          "field" : "annotation:Status",
+          "condition" : "EQUALS",
+          "value" : "Closed"
+        } ]
+      },
+      "automate" : {
+        "open" : true,
+        "refresh" : false,
+        "refreshInterval" : "10s"
+      }
+    }
+  }, {
+    "type" : "text",
+    "id" : "text-9DT6F",
+    "name" : "Selected Detection",
+    "settings" : {
+      "type" : "text",
+      "streamIdField" : {
+        "id" : "__stream_id__",
+        "name" : "__stream_id__",
+        "expression" : "${StreamId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      },
+      "recordNoField" : {
+        "id" : "__event_id__",
+        "name" : "__event_id__",
+        "expression" : "${EventId}",
+        "width" : 200,
+        "visible" : false,
+        "special" : true
+      },
+      "pipeline" : {
+        "type" : "Pipeline",
+        "uuid" : "4786ecd4-cdf7-4959-815a-dbb1f9c7fcb1",
+        "name" : "Detection Details Display"
+      },
+      "showAsHtml" : true,
+      "showStepping" : false,
+      "modelVersion" : "6.1.26"
+    }
+  } ],
+  "layout" : {
+    "type" : "splitLayout",
+    "preferredSize" : {
+      "width" : 200,
+      "height" : 200
+    },
+    "dimension" : 1,
+    "children" : [ {
+      "type" : "tabLayout",
+      "preferredSize" : {
+        "width" : 200,
+        "height" : 328
+      },
+      "tabs" : [ {
+        "id" : "table-IIO1T"
+      }, {
+        "id" : "query-JT8D7"
+      } ],
+      "selected" : 0
+    }, {
+      "type" : "tabLayout",
+      "preferredSize" : {
+        "width" : 0,
+        "height" : 808
+      },
+      "tabs" : [ {
+        "id" : "text-9DT6F",
+        "visible" : true
+      } ],
+      "selected" : 0
+    } ]
+  },
+  "tabVisibility" : "SHOW_ALL"
+}

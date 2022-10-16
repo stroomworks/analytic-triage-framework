@@ -1,0 +1,4 @@
+name=EXTERNAL-DETECTIONS Pipeline-Filter 3aef473
+path=Analysis/Analytic Output/Detections/External Detections Feed
+type=ProcessorFilter
+uuid=3aef4733-2e86-442a-bd27-470d50697792

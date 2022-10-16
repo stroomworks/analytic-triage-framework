@@ -1,0 +1,4 @@
+name=Detect Unusual Login Times
+path=Analysis/Analytics/Examples/Single Event Simple Analysis
+type=XSLT
+uuid=f3e21762-0300-4e49-841d-ac3d13306ac2

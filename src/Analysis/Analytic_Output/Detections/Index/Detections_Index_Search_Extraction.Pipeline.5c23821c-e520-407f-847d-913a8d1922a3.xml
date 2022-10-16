@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<pipeline>
+   <properties>
+      <add>
+         <property>
+            <element>xsltFilter</element>
+            <name>xslt</name>
+            <value>
+               <entity>
+                  <type>XSLT</type>
+                  <uuid>8d619f68-88c7-4c94-9630-ad0fba8e501e</uuid>
+                  <name>Detections Index</name>
+               </entity>
+            </value>
+         </property>
+      </add>
+   </properties>
+</pipeline>

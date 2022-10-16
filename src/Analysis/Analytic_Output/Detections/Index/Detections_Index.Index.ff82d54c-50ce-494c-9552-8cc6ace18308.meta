@@ -1,0 +1,77 @@
+{
+  "type" : "Index",
+  "uuid" : "ff82d54c-50ce-494c-9552-8cc6ace18308",
+  "name" : "Detections Index",
+  "version" : "2aedf664-bca6-4d28-a6d9-d82f52a665c3",
+  "description" : "",
+  "maxDocsPerShard" : 1000000000,
+  "partitionBy" : "MONTH",
+  "partitionSize" : 1,
+  "shardsPerPartition" : 1,
+  "fields" : [ {
+    "fieldType" : "ID",
+    "fieldName" : "StreamId",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "ID",
+    "fieldName" : "EventId",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : true,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "DATE_FIELD",
+    "fieldName" : "EventTime",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "FIELD",
+    "fieldName" : "Detector Name",
+    "analyzerType" : "ALPHA_NUMERIC",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "FIELD",
+    "fieldName" : "Headline",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "FIELD",
+    "fieldName" : "Description",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "FIELD",
+    "fieldName" : "Detail",
+    "analyzerType" : "KEYWORD",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  }, {
+    "fieldType" : "FIELD",
+    "fieldName" : "Feed",
+    "analyzerType" : "ALPHA_NUMERIC",
+    "indexed" : true,
+    "stored" : false,
+    "termPositions" : false,
+    "caseSensitive" : false
+  } ],
+  "volumeGroupName" : "Default Volume Group"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<pipeline>
+   <properties>
+      <add>
+         <property>
+            <element>xsltFilter</element>
+            <name>xslt</name>
+            <value>
+               <entity>
+                  <type>XSLT</type>
+                  <uuid>8d619f68-88c7-4c94-9630-ad0fba8e501e</uuid>
+                  <name>Detections Index</name>
+               </entity>
+            </value>
+         </property>
+         <property>
+            <element>indexingFilter</element>
+            <name>index</name>
+            <value>
+               <entity>
+                  <type>Index</type>
+                  <uuid>ff82d54c-50ce-494c-9552-8cc6ace18308</uuid>
+                  <name>Detections Index</name>
+               </entity>
+            </value>
+         </property>
+      </add>
+   </properties>
+</pipeline>

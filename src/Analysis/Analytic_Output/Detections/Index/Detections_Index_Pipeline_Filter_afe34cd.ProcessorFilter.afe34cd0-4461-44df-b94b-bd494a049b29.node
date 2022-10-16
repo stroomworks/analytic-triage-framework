@@ -1,0 +1,4 @@
+name=Detections Index Pipeline-Filter afe34cd
+path=Analysis/Analytic Output/Detections/Index
+type=ProcessorFilter
+uuid=afe34cd0-4461-44df-b94b-bd494a049b29

@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<pipeline>
+   <properties>
+      <add>
+         <property>
+            <element>dsParser</element>
+            <name>textConverter</name>
+            <value>
+               <entity>
+                  <type>TextConverter</type>
+                  <uuid>1a92552a-153c-4291-bac3-c78d1db82797</uuid>
+                  <name>CSV splitter no header</name>
+               </entity>
+            </value>
+         </property>
+         <property>
+            <element>translationFilter</element>
+            <name>xslt</name>
+            <value>
+               <entity>
+                  <type>XSLT</type>
+                  <uuid>c45fb42d-2cfa-4534-b97e-fbfcc6403e1d</uuid>
+                  <name>SAMPLE-DETECTIONS</name>
+               </entity>
+            </value>
+         </property>
+         <property>
+            <element>schemaFilter</element>
+            <name>schemaGroup</name>
+            <value>
+               <string>DETECTION</string>
+            </value>
+         </property>
+         <property>
+            <element>streamAppender</element>
+            <name>streamType</name>
+            <value>
+               <string>Detections</string>
+            </value>
+         </property>
+      </add>
+   </properties>
+</pipeline>

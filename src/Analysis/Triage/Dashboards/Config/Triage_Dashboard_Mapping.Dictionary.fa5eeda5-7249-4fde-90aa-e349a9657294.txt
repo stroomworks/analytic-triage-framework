@@ -1,0 +1,4 @@
+# Mapping between a Detection Headline (regex) and a Dashboard for Triage
+# Each line is tested sequentially to see if it matches headline
+# Format: regex¬dashboard-uuid or regex¬dashboard-uuid¬escalation comment
+.*¬22046fdb-2afb-4db2-9fb9-e2c043ba4a5f¬Further investigation needed.

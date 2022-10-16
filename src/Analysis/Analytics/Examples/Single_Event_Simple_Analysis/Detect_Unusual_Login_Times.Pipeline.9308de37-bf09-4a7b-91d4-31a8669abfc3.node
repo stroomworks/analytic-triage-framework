@@ -1,0 +1,4 @@
+name=Detect Unusual Login Times
+path=Analysis/Analytics/Examples/Single Event Simple Analysis
+type=Pipeline
+uuid=9308de37-bf09-4a7b-91d4-31a8669abfc3

@@ -1,0 +1,4 @@
+name=Detection Details Display
+path=Analysis/Analytic Output/Detections/Details Display
+type=XSLT
+uuid=8caed362-be2e-4a72-93bf-1f28219e6dab
